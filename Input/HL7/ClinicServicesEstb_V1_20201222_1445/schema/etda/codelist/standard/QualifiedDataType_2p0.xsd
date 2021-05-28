@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited by Office of Standard, ETDA  -->
+<!-- ====================================================================== -->
+<!-- =====     Thai Qualified Data Type for Government Receipt - Schema    ===== -->
+<!-- ====================================================================== -->
+<!--
+Schema agency:  ETDA
+Schema version: 2.0
+Schema date:    April 2020
+
+© Copyright ETDA, 2020
+
+This XML Schema Definition file was developed as a subset profile of the UN/CEFACT Qualified Data Type. 
+
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:qdt="urn:etda:unece:uncefact:data:Standard:QualifiedDataType:2"
+  xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+  xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:2"
+  targetNamespace="urn:etda:unece:uncefact:data:Standard:QualifiedDataType:2"
+  elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0"
+  xmlns:thCitySubDivision="urn:etda:uncefact:codelist:standard:ThaiCitySubDivisionIdentification:1"
+  xmlns:thCity="urn:etda:uncefact:codelist:standard:ThaiCityIdentification:1"
+  xmlns:thCountrySubDivision="urn:etda:uncefact:codelist:standard:ThaiCountrySubDivisionCode:1"
+  xmlns:ids5ISO316612A="urn:un:unece:uncefact:codelist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006"
+  xmlns:clm5ISO63912A="urn:un:unece:uncefact:codelist:standard:ISO:ISO2AlphaLanguageCode:2006-10-27"
+  xmlns:hssDocumentName="urn:hss:codelist:standard:DocumentNameCode:1">
+
+  <xsd:import
+    namespace="urn:un:unece:uncefact:codelist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006"
+    schemaLocation="ISO_ISOTwo-letterCountryCode_SecondEdition2006.xsd"/>
+
+  <xsd:import
+    namespace="urn:un:unece:uncefact:codelist:standard:ISO:ISO2AlphaLanguageCode:2006-10-27"
+    schemaLocation="ISO_ISO2AlphaLanguageCode_2006-10-27.xsd"/>
+
+  <xsd:import namespace="urn:etda:uncefact:codelist:standard:ThaiCountrySubDivisionCode:1"
+    schemaLocation="Thai_CountrySubDivisionCode_1p0.xsd"/>
+
+  <xsd:import namespace="urn:etda:uncefact:codelist:standard:ThaiCityIdentification:1"
+    schemaLocation="Thai_CityIdentification_1p0.xsd"/>
+
+  <xsd:import namespace="urn:etda:uncefact:codelist:standard:ThaiCitySubDivisionIdentification:1"
+    schemaLocation="Thai_CitySubDivisionIdentification_1p0.xsd"/>
+  
+  <xsd:import namespace="urn:hss:codelist:standard:DocumentNameCode:1"
+    schemaLocation="..\..\..\hss\codelist\standard\HSS_DocumentNameCode_1p0.xsd"/>
+  
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions : รหัสเอกสารของกรมสนับสนุนสุขภาพ          ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="DocumentNameCodeContentType">
+    <xsd:simpleContent>
+      <xsd:extension base="hssDocumentName:DocumentNameCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentNameCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value" type="hssDocumentName:DocumentNameCodeContentType" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions : ตำบล                                 ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="ThaiCitySubDivisionName">
+    <xsd:simpleContent>
+      <xsd:extension base="thCitySubDivision:CitySubDivisionNameCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ThaiCitySubDivisionCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value" type="thCitySubDivision:CitySubDivisionNameCodeContentType" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions : อำเภอ                                 ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="ThaiCityName">
+    <xsd:simpleContent>
+      <xsd:extension base="thCity:CityNameCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ThaiDistrictCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value" type="thCity:CityNameCodeContentType" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>  
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions : จังหวัด                                ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="ThaiCountrySubDivisionCode">
+    <xsd:simpleContent>
+      <xsd:extension base="thCountrySubDivision:ThaiCountrySubDivisionCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ThaiProvinceCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value" type="thCountrySubDivision:ThaiCountrySubDivisionCodeContentType" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions Country Code                           ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  
+  <xsd:complexType name="CountryIDType">
+    <xsd:simpleContent>
+      <xsd:extension base="ids5ISO316612A:ISOTwoletterCountryCodeContentType">
+        <xsd:attribute name="schemeID" type="xsd:token" use="optional"/>
+        <xsd:attribute name="schemeAgencyID" type="xsd:token" use="optional"/>
+        <xsd:attribute name="schemeVersionID" type="xsd:token" fixed="second edition 2006"
+          use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>    
+  </xsd:complexType>
+  <xsd:complexType name="CountryCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" use="optional" default="TH"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions Language Code                         ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:simpleType name="LanguageCodeListAgencyIDContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="LanguageCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm5ISO63912A:ISO2AlphaLanguageCodeContentType">
+        <xsd:attribute name="listID" type="xsd:token" fixed="ISO 639-1 2A" use="optional"/>
+        <xsd:attribute name="listAgencyID" type="qdt:LanguageCodeListAgencyIDContentType" fixed="5"
+          use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:token" fixed="2006-10-27" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="LanguageCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value"
+          type="clm5ISO63912A:ISO2AlphaLanguageCodeContentType" use="optional"
+          default="TH"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions String Max 5                          ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="StringMax5">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value"
+          type="qdt:Max5Text" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Max5Text">
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions String Max 13                          ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="StringMax13">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="id"
+          type="qdt:Max13Text" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Max13Text">
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="13"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions String Max 200  ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->
+  <xsd:complexType name="StringMax200">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value"
+          type="qdt:Max200Text" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Max200Text">
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="200"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- =================================================================== -->
+  <!-- ===== Type Definitions String Max 500  ===== -->
+  <!-- =================================================================== -->
+  <!-- ===== String. Type                                            ===== -->
+  <!-- =================================================================== -->  
+  <xsd:complexType name="StringMax500">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="value"
+          type="qdt:Max500Text" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Max500Text">
+    <xsd:restriction base="xsd:token">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="500"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+ 
+</xsd:schema>

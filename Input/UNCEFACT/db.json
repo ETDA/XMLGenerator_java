@@ -1,0 +1,25 @@
+{
+	"databaseType": "MSSQL",
+    "hostName": "localhost",
+    "databaseName": "test_course",
+	"port": "1433",
+    "userName": "user01",
+    "password": "password",
+	"parameter_biding": [
+		{
+			"tableName": "m_student",
+			"orderBy": "student_id",
+			"where": "student_id=@param1"
+		},
+		{
+			"tableName": "t_score",
+			"orderBy": "sbj_cd,sbj_name",
+			"where": "student_id=@param1"
+		},
+		{
+			"tableName": "t_exam",
+			"orderBy": "exam_id",
+			"where": "exam_id=@param2"
+		}
+	]
+}

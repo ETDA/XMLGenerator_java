@@ -1,0 +1,1 @@
+java -jar XMLGenerator.jar -output "output3.xml" -template "Parameter/template.xml" -database "Parameter/db.json" -schemas "ScoreReport_V1_20201228_1505"

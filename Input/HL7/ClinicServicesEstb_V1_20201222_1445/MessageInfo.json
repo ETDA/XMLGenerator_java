@@ -1,0 +1,13 @@
+{
+    "standardName": "Clinicsp02",
+    "standardCode": "",
+    "version": "1.0.0",
+    "messages" : [
+        {
+            "rootTagName": "Clinicsp02",
+            "versionPath": "/Bundle/entry/resource/Composition/extension/valueString/@value",
+            "schemaFilePath": "/schema/fhir/bundle.xsd",
+            "schematronFilePath": "/schema/fhir/bundle.sch"
+        }
+    ]
+}

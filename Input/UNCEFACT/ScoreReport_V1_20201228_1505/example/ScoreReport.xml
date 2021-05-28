@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schematron/ScoreReport_Schematron_1p0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<rsm:ScoreReport xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+ xmlns:qdt="urn:etda:teda:data:QualifiedDataType:1"
+ xmlns:ram="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+ xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+ xmlns:cct="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:rsm="urn:un:unece:etda:data:standard:ScoreReport:1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:un:unece:etda:data:standard:ScoreReport:1 file:../schema/etda/standard/ScopreReport.xsd">
+    <!--      1# ข้อมูลบริบทของเอกสาร      -->
+    <rsm:ScoreReportContext>
+        <!--      1.1 ระบุ OID ของ สพธอ.      -->
+        <ram:OID>2.16.764.1.4.100.20.1.1.1</ram:OID>
+        <!--      1.2 เวอร์ชันของข้อความอิเล็กทรอนิกส์      -->
+        <ram:Version>1.0</ram:Version>
+        <!--      1.3 ภาษาที่ใช้ในเอกสาร      -->
+        <ram:Language>TH</ram:Language>
+        <!--      1.4 เลขที่เอกสาร      -->
+        <ram:ScoreReportID>08003821</ram:ScoreReportID>
+        <!--      1.5 ชื่อเอกสาร      -->
+        <ram:Name>หนังสือรับรองผลการทดสอบวิชาสามัญ 9 วิชา</ram:Name>
+        <!--      1.6 รหัสระบุประเภทเอกสาร      -->
+        <ram:TypeCode>-</ram:TypeCode>
+        <!--      1.7 รหัสระบุประเภทเอกสาร      -->
+        <ram:Purpose>-</ram:Purpose>
+        <!--      1.8 วันเดือนปีที่ออกเอกสาร      -->
+        <ram:IssueDateTime>2020-03-30T00:00:00.0</ram:IssueDateTime>
+        <!--      1.9 วันเดือนปีที่เอกสารมีผล      -->
+        <ram:EffectiveDateTime>
+            <!--      1.9.1 วันเดือนปี      -->
+            <udt:DateTime>2020-03-30T00:00:00.0</udt:DateTime>
+        </ram:EffectiveDateTime>
+        <!--      1.10 วันเดือนปีที่เอกสารหมดอายุ      -->
+        <ram:ExpireDateTime>
+            <!--      1.10.1 วันเดือนปี      -->
+            <udt:DateTime>2020-12-31T23:59:59.0</udt:DateTime>
+        </ram:ExpireDateTime>
+    </rsm:ScoreReportContext>
+    <!--      2# ข้อมูลการสอบ      -->
+    <rsm:Examination>
+        <!--      2.1 ประเภทการสอบ      -->
+        <ram:ExaminationType>วิชาสามัญ 9 วิชา</ram:ExaminationType>
+        <!--      2.2 ปีที่สอบ      -->
+        <ram:ExaminationYear>2019</ram:ExaminationYear>
+        <!--      2.3 วันที่เริ่มการสอบ      -->
+        <ram:ExaminationStartDate>2019-03-14T10:30:00.0</ram:ExaminationStartDate>
+        <!--      2.4 วันที่เสร็จสิ้นการสอบ      -->
+        <ram:ExaminationEndDate>2019-03-15T17:30:00.0</ram:ExaminationEndDate>
+    </rsm:Examination>
+    <!--      3# ข้อมูลผู้เข้าสอบ      -->
+    <rsm:Student>
+        <!--      3.1 รหัสผู้เข้าสอบ      -->
+        <ram:ID>1409903107751</ram:ID>
+        <!--      3.2 หมายเลขที่นั่งสอบ      -->
+        <ram:SeatNumber>08003821</ram:SeatNumber>
+        <!--      3.3 คำนำหน้าชื่อ      -->
+        <ram:NamePrefix>นาย</ram:NamePrefix>
+        <!--      3.4 ชื่อต้น      -->
+        <ram:GivenName>มานะ</ram:GivenName>
+        <!--      3.5 ชื่อกลาง      -->
+        <ram:MiddleName>-</ram:MiddleName>
+        <!--      3.6 นามสกุล      -->
+        <ram:FamilyName>อดทน</ram:FamilyName>
+        <!--      3.7 เพศ      -->
+        <ram:Gender>ชาย</ram:Gender>
+        <!--      3.8 เชื้อชาติ      -->
+        <ram:Nationality>TH</ram:Nationality>
+    </rsm:Student>
+    <!--      4# คะแนนสอบ      -->
+    <rsm:Score>
+        <!--      4.1 รหัสวิชา      -->
+        <ram:SubjectCode>09</ram:SubjectCode>
+        <!--      4.2 ชื่อวิชา      -->
+        <ram:SubjectName>ภาษาไทย</ram:SubjectName>
+        <!--      4.3 คะแนนเต็ม      -->
+        <ram:FullScore>100.00000</ram:FullScore>
+        <!--      4.4 คะแนนที่ได้      -->
+        <ram:StudentScore>52.000000</ram:StudentScore>
+        <!--      4.5 คะแนนมาตรฐาน      -->
+        <ram:StandardScore>49.584258</ram:StandardScore>
+        <!--      4.6 จำนวนผู้เข้าสอบ      -->
+        <ram:Entries>133232</ram:Entries>
+        <!--      4.7 ค่าเฉลี่ย      -->
+        <ram:AverageScore>52.530368</ram:AverageScore>
+        <!--      4.8 การกระจาย      -->
+        <ram:SDScore>12.757142</ram:SDScore>
+    </rsm:Score>
+    <rsm:Score>
+        <ram:SubjectCode>19</ram:SubjectCode>
+        <ram:SubjectName>สังคมศึกษา</ram:SubjectName>
+        <ram:FullScore>100.000000</ram:FullScore>
+        <ram:StudentScore>32.000000</ram:StudentScore>
+        <ram:StandardScore>47.914266</ram:StandardScore>
+        <ram:Entries>130866</ram:Entries>
+        <ram:AverageScore>34.183531</ram:AverageScore>
+        <ram:SDScore>10.468883</ram:SDScore>
+    </rsm:Score>
+    <!--      5# หน่วยงาน      -->
+    <rsm:Organization>
+        <!--      5.1 รหัสหน่วยงาน      -->
+        <ram:OrganizationID>1231221</ram:OrganizationID>
+        <!--      5.2 ชื่อหน่วยงาน      -->
+        <ram:OrganizationName>สถาบันทดสอบทางการศึกษาแห่งชาติ (องค์การมหาชน)</ram:OrganizationName>
+        <!--      5.3 ผู้อำนวยการ      -->
+        <ram:Director>
+            <!--      5.3.1 รหัสประจำตัว      -->
+            <ram:NamePrefix>ผู้ช่วยศาสตราจารย์</ram:NamePrefix>
+            <!--      5.3.2 คำนำหน้าชื่อ      -->
+            <ram:NamePrefix>ดร.</ram:NamePrefix>
+            <!--      5.3.3 ชื่อต้น      -->
+            <ram:GivenName>ศิริดา</ram:GivenName>
+            <!--      5.3.4 ชื่อกลาง      -->
+            <ram:MiddleName></ram:MiddleName>
+            <!--      5.3.5 นามสกุล      -->
+            <ram:Familyname>บุรชาติ</ram:Familyname>
+        </ram:Director>
+        <!--      5.4 ที่อยู่      -->
+        <ram:Address>
+            <!--      5.4.1 ที่อยู่ที่บรรทัดที่ 1      -->
+            <ram:Line1></ram:Line1>
+            <!--      5.4.2 ที่อยู่ที่บรรทัดที่ 2      -->
+            <ram:Line2></ram:Line2>
+            <!--      5.4.3 เลขที่      -->
+            <ram:BuildingNumber>128</ram:BuildingNumber>
+            <!--      5.4.4 บล็อก      -->
+            <ram:BlockName></ram:BlockName>
+            <!--      5.4.5 ชื่อถนน (เพิ่มเติม)       -->
+            <ram:AdditionalStreetName></ram:AdditionalStreetName>
+            <!--      5.4.6 ชื่อถนน       -->
+            <ram:StreetName></ram:StreetName>
+            <!--      5.4.7 ตำบล/แขวง       -->
+            <ram:CitySubDivisionName>แขวงทุ่งพญาไท</ram:CitySubDivisionName>
+            <!--      5.4.8 รหัสตำบล/แขวง       -->
+            <ram:CitySubDivisionID>103701</ram:CitySubDivisionID>
+            <!--      5.4.9 อำเภอ/เขต       -->
+            <ram:CityName>เขตราชเทวี</ram:CityName>
+            <!--      5.4.10 รหัสอำเภอ/เขต       -->
+            <ram:CityID>1037</ram:CityID>
+            <!--      5.4.11 จังหวัด       -->
+            <ram:CountrySubDivisionName>กรุงเทพมหานคร</ram:CountrySubDivisionName>
+            <!--      5.4.12 รหัสจังหวัด       -->
+            <ram:CountrySubDivisionID>10</ram:CountrySubDivisionID>
+            <!--      5.4.13 รหัสประเทศ       -->
+            <ram:CountryCode>TH</ram:CountryCode>
+            <!--      5.4.14 รหัสไปรษณีย์       -->
+            <ram:Postcode>10400</ram:Postcode>
+        </ram:Address>
+        <!--      5.5 ข้อมูลการติดต่อ      -->
+        <ram:ContactDetail>
+            <!--      5.5.1 หมายเลขโทรศัพท์      -->
+            <ram:Telephone>02-217-3800</ram:Telephone>
+            <!--      5.5.2 หมายเลขโทรสาร      -->
+            <ram:Fax>02-219-2996</ram:Fax>
+            <!--      5.5.3 อีเมล      -->
+            <ram:Email>-</ram:Email>
+            <!--      5.5.4 เว็บไซต์      -->
+            <ram:Website>www.niets.or.th</ram:Website>
+        </ram:ContactDetail>
+    </rsm:Organization>
+</rsm:ScoreReport>

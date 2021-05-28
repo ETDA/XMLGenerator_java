@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== -->
+<!-- ===== Hazardous Substance Control Core Component Type Schema Module                                                          ===== -->
+<!-- ====================================================================== -->
+<!--
+  	Scheme agency: 	UN/CEFACT
+  	Scheme version:	1.0
+  	Schema date: 	04JUL17        
+  	
+  	Copyright (C) UN/CEFACT (2007). All Rights Reserved.
+  	
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	UN/CEFACT, except as needed for the purpose of developing UN/CEFACT 
+	specifications, in which case the procedures for copyrights defined in the 
+	UN/CEFACT Intellectual Property Rights document must be followed, or as 
+	required to translate it into languages other than English.
+	
+	The limited permissions granted above are perpetual and will not be revoked 
+	by UN/CEFACT or its successors or assigns.
+	
+	
+	This document and the information contained herein is provided on an "AS IS"
+	basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<xsd:schema version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  targetNamespace="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+  xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+  xmlns:qdt="urn:etda:teda:data:QualifiedDataType:1"
+  xmlns:ram="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+  xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21">
+  <xsd:import namespace="urn:etda:teda:data:QualifiedDataType:1"
+    schemaLocation="../../uncefact/data/standard/QualifiedDataType.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+    schemaLocation="../../uncefact/data/standard/UnqualifiedDataType_21p0.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+    schemaLocation="../../uncefact/data/standard/CoreComponentType_2p0.xsd"/>
+  <xsd:import
+    namespace="urn:un:unece:uncefact:codelist:standard:UNECE:AllowanceChargeIdentificationCode:D16B"
+    schemaLocation="../../uncefact/codelist/standard/UNECE_AllowanceChargeIdentificationCode_D16B.xsd"/>
+  <xsd:complexType name="RelatedDocumentType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="ID" type="udt:IDType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01010239</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>FLUX Report_ Document. Identification. Identifier</ccts:DictionaryEntryName>
+            <ccts:Version>1.2</ccts:Version>
+            <ccts:Definition>An identification, such as RFC4122 Universally Unique IDentifier (UUID) or a human readable identifier, of this FLUX report document.</ccts:Definition>
+            <ccts:Cardinality>1..n</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>FLUX Report</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Identification</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Identifier</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>FLUX</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>Fisheries</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element name="Name" type="udt:TextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReferencedDocumentType">
+    <!-- <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+        <ccts:UniqueID>UN03000014</ccts:UniqueID>
+        <ccts:Acronym>ABIE</ccts:Acronym>
+        <ccts:DictionaryEntryName>SPS Referenced_ Document. Details</ccts:DictionaryEntryName>
+        <ccts:Version>1.0</ccts:Version>
+        <ccts:Definition>A reference to a collection of data for a piece of written, printed or electronic matter that provides information or evidence about Sanitary and Phytosanitary (SPS) measures.</ccts:Definition>
+        <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+        <ccts:ObjectClassQualifierTerm>SPS Referenced</ccts:ObjectClassQualifierTerm>
+        <ccts:BusinessTerm>Related Document</ccts:BusinessTerm>
+        <ccts:BusinessProcessContextValue>Sanitary and Phytosanitary Measures</ccts:BusinessProcessContextValue>
+        <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+        <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+        <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+        <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+        <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+        <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+        <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+      </xsd:documentation>
+    </xsd:annotation>-->
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="ID" type="udt:IDType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN03000018</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>SPS Referenced_ Document. Identification. Identifier</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The unique identifier for this referenced SPS document.</ccts:Definition>
+            <ccts:Cardinality>1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>SPS Referenced</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Identification</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Identifier</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Sanitary and Phytosanitary Measures</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+            <ccts:BusinessTerm>Related Document Number</ccts:BusinessTerm>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="Name" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01009091</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>AAA Archive_ Document. Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, for this AAA archive document.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>AAA Archive</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Accounting, audit and reporting</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>Accounting, audit and reporting, Accounting entry</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="0" name="IssueDateTime" type="qdt:DateMandatoryDateTimeType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN03000015</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>SPS Referenced_ Document. Issue. Date Time</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The date or date time for the issuance of this referenced SPS document.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>SPS Referenced</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Issue</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Date Time</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Sanitary and Phytosanitary Measures</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+            <ccts:BusinessTerm>Related Document Date</ccts:BusinessTerm>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="AttachmentBinaryObject"
+        type="udt:BinaryObjectType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01007574</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>SPS Referenced_ Document. Attachment. Binary Object</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>A binary object that is attached or otherwise appended to this referenced SPS document.</ccts:Definition>
+            <ccts:Cardinality>0..n</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>SPS Referenced</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Attachment</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Binary Object</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Sanitary and Phytosanitary Measures</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Information" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01007575</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>SPS Referenced_ Document. Information. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>Information, expressed as text, for this referenced SPS document.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Document</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>SPS Referenced</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Information</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Sanitary and Phytosanitary Measures</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>-->
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SpecifiedPersonType">
+    <xsd:sequence>
+      <xsd:element name="ID" type="udt:IDType" minOccurs="0"/>
+      <xsd:element name="NamePrefix" type="qdt:Max35TextType" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="GivenName" type="udt:NameType" maxOccurs="unbounded"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="MiddleName" type="udt:NameType"/>
+      <xsd:element name="Familyname" type="udt:NameType" form="qualified" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PostalAddressType">
+    <!-- <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+        <ccts:UniqueID>UN01000895</ccts:UniqueID>
+        <ccts:Acronym>ABIE</ccts:Acronym>
+        <ccts:DictionaryEntryName>Structured_ Address. Details</ccts:DictionaryEntryName>
+        <ccts:Version>1.0</ccts:Version>
+        <ccts:Definition>The location, using a structured address format, at which a particular organization or person may be found or reached.</ccts:Definition>
+        <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+        <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+        <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+        <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+        <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+        <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+        <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+        <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+        <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+        <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+      </xsd:documentation>
+    </xsd:annotation>-->
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Line1" type="udt:TextType"/>
+      <xsd:element minOccurs="0" name="Line2" type="udt:TextType"/>
+      <xsd:element minOccurs="1" name="BuildingNumber" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01005133</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Building Number. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.1</ccts:Version>
+            <ccts:Definition>The number, expressed as text, of a building or house on a street at this structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Building Number</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="0" name="BlockName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01001233</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Block Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The block name, expressed as text, for an area surrounded by streets for this structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Block Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="0" name="AdditionalStreetName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000899</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Street Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, of a street or thoroughfare in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Street Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="0" name="StreetName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000899</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Street Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, of a street or thoroughfare in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Street Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CitySubDivisionName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000902</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. City Sub-Division Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, of a sub-division of a city, town or village in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>City Sub-Division Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CitySubDivisionID" type="qdt:ThaiCitySubDivisionName"/>
+      <xsd:element minOccurs="1" name="CityName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000900</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. City Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, of the city, town or village in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>City Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CityID" type="qdt:ThaiCityName">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01002509</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Unstructured_ Address. City. Identifier</ccts:DictionaryEntryName>
+            <ccts:Version>1.1</ccts:Version>
+            <ccts:Definition>The identifier of the city for this unstructured address, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Unstructured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>City</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Identifier</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CountrySubDivisionName" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000904</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Country Sub-Division Name. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The name, expressed as text, of the sub-division of a country in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Country Sub-Division Name</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CountrySubDivisionID" type="qdt:ThaiCountrySubDivisionCode">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01002510</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Unstructured_ Address. Country Sub-Division. Identifier</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The unique identifier of the country sub-division of this unstructured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Unstructured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Country Sub-Division</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Identifier</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="CountryCode" type="qdt:CountryIDType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000901</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Country. Identifier</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The unique identifier of a country in the structured address (Reference ISO 3166 and UN/ECE Rec 3).</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Country</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Identifier</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>--> </xsd:element>
+      <xsd:element minOccurs="1" name="Postcode" type="udt:CodeType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01000897</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Structured_ Address. Postcode. Code</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The code specifying the postcode in the structured address.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Structured</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Postcode</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Code</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>In All Contexts</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>-->
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocalNumberCommunicationType">
+    <!-- <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+        <ccts:UniqueID>UN01007762</ccts:UniqueID>
+        <ccts:Acronym>ABIE</ccts:Acronym>
+        <ccts:DictionaryEntryName>AAA_ Communication. Details</ccts:DictionaryEntryName>
+        <ccts:Version>1.0</ccts:Version>
+        <ccts:Definition>A defined AAA (Accounting And Audit) exchange of thoughts, messages, or information, as exchanged by speech, signals, writing, or behaviour between persons and/or organizations.</ccts:Definition>
+        <ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+        <ccts:ObjectClassQualifierTerm>AAA</ccts:ObjectClassQualifierTerm>
+        <ccts:BusinessProcessContextValue>Accounting, audit and reporting</ccts:BusinessProcessContextValue>
+        <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+        <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+        <ccts:ProductContextValue>Accounting, audit and reporting</ccts:ProductContextValue>
+        <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+        <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+        <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+        <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+      </xsd:documentation>
+    </xsd:annotation>-->
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="LocalNumber" type="udt:TextType">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01007764</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>AAA_ Communication. Local Number. Text</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The local number, expressed as text, for this AAA communication.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>AAA</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>Local Number</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Text</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>Accounting, audit and reporting</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>Accounting, audit and reporting</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>In All Contexts</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>In All Contexts</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>-->
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ScoreReportContextType">
+    <xsd:annotation>
+      <xsd:documentation source="BN/BN">Document Context Parameter</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="OID" type="udt:IDType">
+        <xsd:annotation>
+          <xsd:documentation source="BN/BN">ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Version" type="xsd:decimal" default="1.0"/>
+      <xsd:element name="Language" type="qdt:LanguageCodeType"/>
+      <xsd:element name="ScoreReportID" type="qdt:Max35IDType"/>
+      <xsd:element name="Name" type="qdt:Max140TextType"
+        default="หนังสือรับรองผลการทดสอบวิชาสามัญ 9 วิชา"/>
+      <xsd:element name="TypeCode" type="qdt:Max16TextType" minOccurs="0"/>
+      <xsd:element name="Purpose" type="qdt:Max256TextType" minOccurs="0"/>
+      <xsd:element name="IssueDateTime" type="qdt:ISODateTime"/>
+      <xsd:element minOccurs="1" name="EffectiveDateTime" type="udt:DateTimeType" form="qualified"
+        maxOccurs="1"/>
+      <xsd:element minOccurs="0" name="ExpireDateTime" type="udt:DateTimeType" maxOccurs="1">
+        <!-- <xsd:annotation>
+          <xsd:documentation xml:lang="en">
+            <ccts:UniqueID>UN01005110</ccts:UniqueID>
+            <ccts:Acronym>BCC</ccts:Acronym>
+            <ccts:DictionaryEntryName>Available_ Period. End. Date Time</ccts:DictionaryEntryName>
+            <ccts:Version>1.0</ccts:Version>
+            <ccts:Definition>The date, time, date time or other date time value for the end of this available period of time.</ccts:Definition>
+            <ccts:Cardinality>0..1</ccts:Cardinality>
+            <ccts:ObjectClassTerm>Period</ccts:ObjectClassTerm>
+            <ccts:ObjectClassQualifierTerm>Available</ccts:ObjectClassQualifierTerm>
+            <ccts:PropertyTerm>End</ccts:PropertyTerm>
+            <ccts:PrimaryRepresentationTerm>Date Time</ccts:PrimaryRepresentationTerm>
+            <ccts:BusinessProcessContextValue>In All Contexts</ccts:BusinessProcessContextValue>
+            <ccts:GeopoliticalOrRegionContextValue>In All Contexts</ccts:GeopoliticalOrRegionContextValue>
+            <ccts:OfficialConstraintContextValue>None</ccts:OfficialConstraintContextValue>
+            <ccts:ProductContextValue>Information</ccts:ProductContextValue>
+            <ccts:IndustryContextValue>Travel, Tourism &amp; Leisure</ccts:IndustryContextValue>
+            <ccts:BusinessProcessRoleContextValue>Travel Product Response</ccts:BusinessProcessRoleContextValue>
+            <ccts:SupportingRoleContextValue>In All Contexts</ccts:SupportingRoleContextValue>
+            <ccts:SystemCapabilitiesContextValue>In All Contexts</ccts:SystemCapabilitiesContextValue>
+          </xsd:documentation>
+        </xsd:annotation>-->
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrganizationType">
+    <xsd:sequence>
+      <xsd:element name="OrganizationID" type="qdt:Max35TextType"/>
+      <xsd:element minOccurs="1" name="OrganizationName" type="qdt:Max256TextType"/>
+      <xsd:element name="Director" type="ram:SpecifiedPersonType"/>
+      <xsd:element name="Address" type="ram:PostalAddressType"/>
+      <xsd:element minOccurs="0" name="ContactDetail" type="ram:ContactDatailType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExaminationType">
+    <xsd:sequence>
+      <xsd:element name="ExaminationType" type="qdt:Max140TextType"/>
+      <xsd:element name="ExaminationYear" type="xsd:gYear"/>
+      <xsd:element name="ExaminationStartDate" type="qdt:ISODateTime"/>
+      <xsd:element name="ExaminationEndDate" type="qdt:ISODateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StudentType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" name="ID" type="qdt:Max16TextType"/>
+      <xsd:element name="SeatNumber" type="qdt:Max35TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="NamePrefix" type="qdt:Max35TextType"/>
+      <xsd:element maxOccurs="unbounded" name="GivenName" type="qdt:Max256TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="MiddleName" type="qdt:Max256TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="1" name="FamilyName" type="qdt:Max256TextType"/>
+      <xsd:element minOccurs="0" name="Gender" type="qdt:Max16TextType"/>
+      <xsd:element minOccurs="0" name="BirthDate" type="qdt:ISODateTime"/>
+      <xsd:element minOccurs="0" name="Nationality" type="qdt:CountryIDType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ScoreType">
+    <xsd:sequence>
+      <xsd:element name="SubjectCode" type="qdt:Max16TextType"/>
+      <xsd:element name="SubjectName" type="qdt:Max256TextType"/>
+      <xsd:element name="FullScore" type="xsd:decimal"/>
+      <xsd:element name="StudentScore" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="StandardScore" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="Entries" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="AverageScore" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="SDScore" type="xsd:decimal" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ContactDatailType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Telephone" type="qdt:Max35TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Fax" type="qdt:Max35TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Email" type="qdt:Max256TextType"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Website" type="qdt:Max256TextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

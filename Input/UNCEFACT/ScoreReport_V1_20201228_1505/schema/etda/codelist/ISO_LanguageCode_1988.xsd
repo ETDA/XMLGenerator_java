@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== -->
+<!-- =====  5639 - Code List Schema Module                            ===== -->
+<!-- ====================================================================== -->
+<!--
+   Schema agency:       UN/CEFACT
+   Schema version:	2.0	
+   Schema date:         17 January 2006
+  	
+   Code list name: 	Language Code
+   Code list agency: 	ISO
+   Code list version:   1988
+
+   The terms and definitions taken from ISO 639, ISO 4217, ISO 3166 and ISO 3166-2 are reproduced 
+   with the permission of the International Organization for Standardization, ISO. These standards 
+   can be obtained from any ISO member and from the Web site of the ISO Central Secretariat at the 
+   following address: www.iso.org. Content copyright remains with ISO.
+
+   Schema Copyright (C) UN/CEFACT (2007). All Rights Reserved.
+
+   This document and translations of it may be copied and furnished to others, 
+   and derivative works that comment on or otherwise explain it or assist 
+   in its implementation may be prepared, copied, published and distributed, 
+   in whole or in part, without restriction of any kind, provided that the 
+   above copyright notice and this paragraph are included on all such copies 
+   and derivative works. However, this document itself may not be modified in 
+   any way, such as by removing the copyright notice or references to 
+   UN/CEFACT, except as needed for the purpose of developing UN/CEFACT 
+   specifications, in which case the procedures for copyrights defined in the 
+   UN/CEFACT Intellectual Property Rights document must be followed, or as 
+   required to translate it into languages other than English.
+
+   The limited permissions granted above are perpetual and will not be revoked 
+   by UN/CEFACT or its successors or assigns.
+
+   This document and the information contained herein is provided on an "AS IS"
+   basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+   BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+   NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+   FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<xsd:schema version="2.0" targetNamespace="urn:un:unece:uncefact:codelist:standard:5:639:1988" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:clm5639="urn:un:unece:uncefact:codelist:standard:5:639:1988" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ====================================================================== -->
+<!-- =====  Element Declarations                                      ===== -->
+<!-- ====================================================================== -->
+<!-- =====  Root Element                                              ===== -->
+<!-- ====================================================================== -->
+<xsd:element name="LanguageCode" type="clm5639:LanguageCodeContentType"/>
+<!-- ====================================================================== -->
+<!-- =====  Type Definitions                                          ===== -->
+<!-- ====================================================================== -->
+<!-- =====  Type Definition:  Language Code Content Type              ===== -->
+<!-- ====================================================================== -->
+	<xsd:simpleType name="LanguageCodeContentType">
+		<xsd:restriction base="xsd:token">
+			<xsd:length value="3"/>
+			<xsd:enumeration value="abk"/>
+			<xsd:enumeration value="ace"/>
+			<xsd:enumeration value="ach"/>
+			<xsd:enumeration value="ada"/>
+			<xsd:enumeration value="aar"/>
+			<xsd:enumeration value="afh"/>
+			<xsd:enumeration value="afr"/>
+			<xsd:enumeration value="afa"/>
+			<xsd:enumeration value="aka"/>
+			<xsd:enumeration value="akk"/>
+			<xsd:enumeration value="alb"/>
+			<xsd:enumeration value="ale"/>
+			<xsd:enumeration value="alg"/>
+			<xsd:enumeration value="tut"/>
+			<xsd:enumeration value="amh"/>
+			<xsd:enumeration value="apa"/>
+			<xsd:enumeration value="ara"/>
+			<xsd:enumeration value="arc"/>
+			<xsd:enumeration value="arp"/>
+			<xsd:enumeration value="arn"/>
+			<xsd:enumeration value="arw"/>
+			<xsd:enumeration value="arm"/>
+			<xsd:enumeration value="art"/>
+			<xsd:enumeration value="asm"/>
+			<xsd:enumeration value="ath"/>
+			<xsd:enumeration value="aus"/>
+			<xsd:enumeration value="map"/>
+			<xsd:enumeration value="ava"/>
+			<xsd:enumeration value="ave"/>
+			<xsd:enumeration value="awa"/>
+			<xsd:enumeration value="aym"/>
+			<xsd:enumeration value="aze"/>
+			<xsd:enumeration value="ban"/>
+			<xsd:enumeration value="bat"/>
+			<xsd:enumeration value="bal"/>
+			<xsd:enumeration value="bam"/>
+			<xsd:enumeration value="bai"/>
+			<xsd:enumeration value="bad"/>
+			<xsd:enumeration value="bnt"/>
+			<xsd:enumeration value="bas"/>
+			<xsd:enumeration value="bak"/>
+			<xsd:enumeration value="baq"/>
+			<xsd:enumeration value="btk"/>
+			<xsd:enumeration value="bej"/>
+			<xsd:enumeration value="bel"/>
+			<xsd:enumeration value="bem"/>
+			<xsd:enumeration value="ben"/>
+			<xsd:enumeration value="ber"/>
+			<xsd:enumeration value="bho"/>
+			<xsd:enumeration value="bih"/>
+			<xsd:enumeration value="bik"/>
+			<xsd:enumeration value="bin"/>
+			<xsd:enumeration value="bis"/>
+			<xsd:enumeration value="nob"/>
+			<xsd:enumeration value="bos"/>
+			<xsd:enumeration value="bra"/>
+			<xsd:enumeration value="bre"/>
+			<xsd:enumeration value="bug"/>
+			<xsd:enumeration value="bul"/>
+			<xsd:enumeration value="bua"/>
+			<xsd:enumeration value="bur"/>
+			<xsd:enumeration value="cad"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="spa"/>
+			<xsd:enumeration value="cat"/>
+			<xsd:enumeration value="cau"/>
+			<xsd:enumeration value="ceb"/>
+			<xsd:enumeration value="cel"/>
+			<xsd:enumeration value="cai"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

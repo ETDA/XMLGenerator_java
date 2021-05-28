@@ -1,0 +1,20 @@
+{
+	"databaseType": "MSSQL",
+    "hostName": "localhost",
+    "databaseName": "test_clinic",
+	"port": "1433",
+    "userName": "user01",
+    "password": "password",
+	"parameter_biding": [
+		{
+			"tableName": "m_practitioner",
+			"orderBy": "prtc_id",
+			"where": "prtc_id='@param1'"
+		},
+		{
+			"tableName": "t_clnEst",
+			"orderBy": "clnEst_id",
+			"where": "clnEst_id='@param2'"
+		}
+	]
+}

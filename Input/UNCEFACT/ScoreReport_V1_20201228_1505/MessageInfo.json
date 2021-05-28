@@ -1,0 +1,12 @@
+{
+    "standardName": "Score Report",
+    "standardCode": "",
+    "version": "1.0.0",
+    "messages": [{
+            "rootTagName": "ScoreReport",
+            "versionPath": "/ScoreReport/ScoreReportContext/Version",
+            "schemaFilePath": "/schema/etda/standard/ScoreReport.xsd",
+            "schematronFilePath": "/schematron/ScoreReport_Schematron_1p0.sch"
+        }
+    ]
+}

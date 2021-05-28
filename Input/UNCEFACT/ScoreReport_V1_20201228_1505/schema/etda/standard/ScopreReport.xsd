@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="urn:un:unece:etda:data:standard:ScoreReport:1"
+    xmlns:qdt="urn:etda:teda:data:QualifiedDataType:1"
+    xmlns:ram="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+    xmlns:rsm="urn:un:unece:etda:data:standard:ScoreReport:1"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21">
+
+    <xs:import
+        namespace="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+        schemaLocation="ScoreReport_ReuseableAggregateCoreComponent_1p0.xsd"/>
+    <xs:import namespace="urn:etda:teda:data:QualifiedDataType:1"
+        schemaLocation="../../uncefact/data/standard/QualifiedDataType.xsd"/>
+    <xs:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+        schemaLocation="../../uncefact/data/standard/UnqualifiedDataType_21p0.xsd"/>
+    <xs:element name="ScoreReport" type="rsm:ScoreReportType"/>
+    <xs:complexType name="ScoreReportType">
+        <xs:sequence>
+            <xs:element name="ScoreReportContext" type="ram:ScoreReportContextType"/>
+            <xs:element name="Examination" type="ram:ExaminationType"/>
+            <xs:element name="Student" type="ram:StudentType"/>
+            <xs:element maxOccurs="unbounded" minOccurs="1" name="Score" type="ram:ScoreType"/>
+            <xs:element name="Organization" type="ram:OrganizationType"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

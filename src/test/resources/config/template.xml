@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schematron/ScoreReport_Schematron_1p0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<rsm:ScoreReport xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+ xmlns:qdt="urn:etda:teda:data:QualifiedDataType:1"
+ xmlns:ram="urn:un:unece:etda:data:standard:ScoreReport_ReuseableAggregateCoreComponent:1"
+ xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+ xmlns:cct="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:rsm="urn:un:unece:etda:data:standard:ScoreReport:1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:un:unece:etda:data:standard:ScoreReport:1 file:../schema/etda/standard/ScopreReport.xsd">
+    <rsm:ScoreReportContext>
+        <ram:OID />
+        <ram:Version>1.0</ram:Version>
+        <ram:Language>TH</ram:Language>
+        <ram:ScoreReportID>10112322</ram:ScoreReportID>
+        <ram:Name>หนังสือรับรองผลการทดสอบวิชาสามัญ 9 วิชา</ram:Name>
+        <ram:TypeCode>-</ram:TypeCode>
+        <ram:Purpose>-</ram:Purpose>
+        <ram:IssueDateTime>2020-03-30T00:00:00.0</ram:IssueDateTime>
+        <ram:EffectiveDateTime>
+            <udt:DateTime>2020-03-30T00:00:00.0</udt:DateTime>
+        </ram:EffectiveDateTime>
+        <ram:ExpireDateTime>
+            <udt:DateTime>2020-12-31T23:59:59.0</udt:DateTime>
+        </ram:ExpireDateTime>
+    </rsm:ScoreReportContext>
+    <rsm:Examination>
+        <ram:ExaminationType>วิชาสามัญ 9 วิชา</ram:ExaminationType>
+        <ram:ExaminationYear>2019</ram:ExaminationYear>
+        <ram:ExaminationStartDate>2019-03-14T10:30:00.0</ram:ExaminationStartDate>
+        <ram:ExaminationEndDate>2019-03-15T17:30:00.0</ram:ExaminationEndDate>
+    </rsm:Examination>
+    <rsm:Student>
+        <ram:ID>@m_student.student_id</ram:ID>
+        <ram:SeatNumber>@m_student.seat_no</ram:SeatNumber>
+        <ram:NamePrefix>@m_student.student_prefix</ram:NamePrefix>
+        <ram:GivenName>@m_student.studen_fname</ram:GivenName>
+        <ram:MiddleName>@m_student.studen_mname</ram:MiddleName>
+        <ram:FamilyName>@m_student.studen_lname</ram:FamilyName>
+        <ram:Gender>@m_student.stugent_gender</ram:Gender>
+        <ram:Nationality>@m_student.student_nationality</ram:Nationality>
+    </rsm:Student>
+    <rsm:Score>
+        <ram:SubjectCode>@t_score.sbj_cd</ram:SubjectCode>
+        <ram:SubjectName>@t_score.sbj_name</ram:SubjectName>
+        <ram:FullScore>@t_score.full_score</ram:FullScore>
+        <ram:StudentScore>@t_score.student_score</ram:StudentScore>
+        <ram:StandardScore>@t_score.standard_score</ram:StandardScore>
+        <ram:Entries>@t_score.entires</ram:Entries>
+        <ram:AverageScore>@t_score.average_score</ram:AverageScore>
+        <ram:SDScore>@t_score.sd_score</ram:SDScore>
+    </rsm:Score>
+    <rsm:Organization>
+        <ram:OrganizationID>1231221</ram:OrganizationID>
+        <ram:OrganizationName>สถาบันทดสอบทางการศึกษาแห่งชาติ (องค์การมหาชน)</ram:OrganizationName>
+        <ram:Director>
+            <ram:NamePrefix>ผู้ช่วยศาสตราจารย์</ram:NamePrefix>
+            <ram:NamePrefix>ดร.</ram:NamePrefix>
+            <ram:GivenName>ศิริดา</ram:GivenName>
+            <ram:MiddleName></ram:MiddleName>
+            <ram:Familyname>บุรชาติ</ram:Familyname>
+        </ram:Director>
+        <ram:Address>
+            <ram:Line1></ram:Line1>
+            <ram:Line2></ram:Line2>
+            <ram:BuildingNumber>128</ram:BuildingNumber>
+            <ram:BlockName></ram:BlockName>
+            <ram:AdditionalStreetName></ram:AdditionalStreetName>
+            <ram:StreetName></ram:StreetName>
+            <ram:CitySubDivisionName>แขวงทุ่งพญาไท</ram:CitySubDivisionName>
+            <ram:CitySubDivisionID>103701</ram:CitySubDivisionID>
+            <ram:CityName>เขตราชเทวี</ram:CityName>
+            <ram:CityID>1037</ram:CityID>
+            <ram:CountrySubDivisionName>กรุงเทพมหานคร</ram:CountrySubDivisionName>
+            <ram:CountrySubDivisionID>10</ram:CountrySubDivisionID>
+            <ram:CountryCode>TH</ram:CountryCode>
+            <ram:Postcode>10400</ram:Postcode>
+        </ram:Address>
+        <ram:ContactDetail>
+            <ram:Telephone>02-217-3800</ram:Telephone>
+            <ram:Fax>02-219-2996</ram:Fax>
+            <ram:Email>-</ram:Email>
+            <ram:Website>www.niets.or.th</ram:Website>
+        </ram:ContactDetail>
+    </rsm:Organization>
+</rsm:ScoreReport>
